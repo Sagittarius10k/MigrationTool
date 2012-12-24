@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using Microsoft.Practices.Prism.MefExtensions;
 using Microsoft.Practices.Prism.UnityExtensions;
 
 namespace MigrationTool
 {
-    class Bootstrapper : UnityBootstrapper
+    class Bootstrapper : MefBootstrapper
     {
-        protected override System.Windows.DependencyObject CreateShell()
+        protected override DependencyObject CreateShell()
         {
             return new Shell();
         }
@@ -26,7 +22,6 @@ namespace MigrationTool
         protected override void ConfigureModuleCatalog()
         {
             base.ConfigureModuleCatalog();
-
         }
     }
 }

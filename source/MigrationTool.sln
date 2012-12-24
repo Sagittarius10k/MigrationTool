@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationTool", "MigrationTool\MigrationTool.csproj", "{17AC671D-15DE-4A2F-AF5C-1F7E6AC80A5A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{62864421-34E1-4600-8B6A-6F2B694A245D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationTool.Modules.Projects", "MigrationTool.Modules.Projects\MigrationTool.Modules.Projects.csproj", "{B737146E-153C-4CD0-A272-A7AF04B70429}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationTool.Modules.Import", "MigrationTool.Modules.Import\MigrationTool.Modules.Import.csproj", "{2CE3DEB1-1DF0-43AC-8C67-8D8DFC4ACF18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationTool.Modules.Editor", "MigrationTool.Modules.Editor\MigrationTool.Modules.Editor.csproj", "{B22B5B7B-9908-4765-BE67-4B0A0026CAF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +21,25 @@ Global
 		{17AC671D-15DE-4A2F-AF5C-1F7E6AC80A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17AC671D-15DE-4A2F-AF5C-1F7E6AC80A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17AC671D-15DE-4A2F-AF5C-1F7E6AC80A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B737146E-153C-4CD0-A272-A7AF04B70429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B737146E-153C-4CD0-A272-A7AF04B70429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B737146E-153C-4CD0-A272-A7AF04B70429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B737146E-153C-4CD0-A272-A7AF04B70429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE3DEB1-1DF0-43AC-8C67-8D8DFC4ACF18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE3DEB1-1DF0-43AC-8C67-8D8DFC4ACF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE3DEB1-1DF0-43AC-8C67-8D8DFC4ACF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE3DEB1-1DF0-43AC-8C67-8D8DFC4ACF18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B22B5B7B-9908-4765-BE67-4B0A0026CAF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22B5B7B-9908-4765-BE67-4B0A0026CAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22B5B7B-9908-4765-BE67-4B0A0026CAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22B5B7B-9908-4765-BE67-4B0A0026CAF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B737146E-153C-4CD0-A272-A7AF04B70429} = {62864421-34E1-4600-8B6A-6F2B694A245D}
+		{2CE3DEB1-1DF0-43AC-8C67-8D8DFC4ACF18} = {62864421-34E1-4600-8B6A-6F2B694A245D}
+		{B22B5B7B-9908-4765-BE67-4B0A0026CAF6} = {62864421-34E1-4600-8B6A-6F2B694A245D}
 	EndGlobalSection
 EndGlobal

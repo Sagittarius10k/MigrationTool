@@ -118,6 +118,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MigrationTool.Modules.Editor\MigrationTool.Modules.Editor.csproj">
+      <Project>{b22b5b7b-9908-4765-be67-4b0a0026caf6}</Project>
+      <Name>MigrationTool.Modules.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MigrationTool.Modules.Import\MigrationTool.Modules.Import.csproj">
+      <Project>{2ce3deb1-1df0-43ac-8c67-8d8dfc4acf18}</Project>
+      <Name>MigrationTool.Modules.Import</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MigrationTool.Modules.Projects\MigrationTool.Modules.Projects.csproj">
+      <Project>{b737146e-153c-4cd0-a272-a7af04b70429}</Project>
+      <Name>MigrationTool.Modules.Projects</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
