@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationTool.Modules.Impor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationTool.Modules.Editor", "MigrationTool.Modules.Editor\MigrationTool.Modules.Editor.csproj", "{B22B5B7B-9908-4765-BE67-4B0A0026CAF6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{DEB8B74D-C47F-4172-AA4F-3296D22F4BA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationTool.Infrastructure", "MigrationTool.Infrastructure\MigrationTool.Infrastructure.csproj", "{728C9999-2DD5-4C97-AFE4-F375CAFA7D4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,10 @@ Global
 		{B22B5B7B-9908-4765-BE67-4B0A0026CAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B22B5B7B-9908-4765-BE67-4B0A0026CAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B22B5B7B-9908-4765-BE67-4B0A0026CAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{728C9999-2DD5-4C97-AFE4-F375CAFA7D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728C9999-2DD5-4C97-AFE4-F375CAFA7D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728C9999-2DD5-4C97-AFE4-F375CAFA7D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728C9999-2DD5-4C97-AFE4-F375CAFA7D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,5 +49,6 @@ Global
 		{B737146E-153C-4CD0-A272-A7AF04B70429} = {62864421-34E1-4600-8B6A-6F2B694A245D}
 		{2CE3DEB1-1DF0-43AC-8C67-8D8DFC4ACF18} = {62864421-34E1-4600-8B6A-6F2B694A245D}
 		{B22B5B7B-9908-4765-BE67-4B0A0026CAF6} = {62864421-34E1-4600-8B6A-6F2B694A245D}
+		{728C9999-2DD5-4C97-AFE4-F375CAFA7D4B} = {DEB8B74D-C47F-4172-AA4F-3296D22F4BA5}
 	EndGlobalSection
 EndGlobal

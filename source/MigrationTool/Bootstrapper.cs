@@ -15,7 +15,7 @@ namespace MigrationTool
         {
             base.InitializeShell();
 
-            Application.Current.MainWindow = (Window) Shell;
+            Application.Current.MainWindow = (Shell)Shell;
             Application.Current.MainWindow.Show();
         }
 
