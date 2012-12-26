@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MigrationTool.Modules.Editor
 {
-    public class EditorDataModule
+    public class EditorModule
     {
     }
 }

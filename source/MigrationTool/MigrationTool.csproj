@@ -59,6 +59,8 @@
       <HintPath>..\MigrationTool.Library\Microsoft.Practices.Unity.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -119,6 +121,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MigrationTool.Infrastructure\MigrationTool.Infrastructure.csproj">
+      <Project>{728c9999-2dd5-4c97-afe4-f375cafa7d4b}</Project>
+      <Name>MigrationTool.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MigrationTool.Modules.Editor\MigrationTool.Modules.Editor.csproj">
       <Project>{b22b5b7b-9908-4765-be67-4b0a0026caf6}</Project>
       <Name>MigrationTool.Modules.Editor</Name>

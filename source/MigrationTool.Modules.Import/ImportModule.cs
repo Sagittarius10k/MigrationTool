@@ -1,6 +1,6 @@
 ﻿namespace MigrationTool.Modules.Import
 {
-    public class ImportDataModule
+    public class ImportModule
     {
     }
 }

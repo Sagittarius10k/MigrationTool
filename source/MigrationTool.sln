@@ -2,6 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigrationTool", "MigrationTool\MigrationTool.csproj", "{17AC671D-15DE-4A2F-AF5C-1F7E6AC80A5A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{728C9999-2DD5-4C97-AFE4-F375CAFA7D4B} = {728C9999-2DD5-4C97-AFE4-F375CAFA7D4B}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{62864421-34E1-4600-8B6A-6F2B694A245D}"
 EndProject

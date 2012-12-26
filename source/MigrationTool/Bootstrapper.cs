@@ -1,6 +1,9 @@
-﻿using System.Windows;
+﻿using System.ComponentModel.Composition.Hosting;
+using System.Windows;
 using Microsoft.Practices.Prism.MefExtensions;
-using Microsoft.Practices.Prism.UnityExtensions;
+using MigrationTool.Modules.Editor;
+using MigrationTool.Modules.Import;
+using MigrationTool.Modules.Projects;
 
 namespace MigrationTool
 {
@@ -19,9 +22,13 @@ namespace MigrationTool
             Application.Current.MainWindow.Show();
         }
 
-        protected override void ConfigureModuleCatalog()
+        protected override void ConfigureAggregateCatalog()
         {
-            base.ConfigureModuleCatalog();
+            base.ConfigureAggregateCatalog();
+
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(EditorModule).Assembly));
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ImportModule).Assembly));
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ProjectsModule).Assembly));
         }
     }
 }
