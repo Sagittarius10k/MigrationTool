@@ -35,6 +35,7 @@
       <HintPath>..\MigrationTool.Library\Microsoft.Practices.Prism.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CallbackLogger.cs" />
+    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Configuration\FileElement.cs" />
     <Compile Include="Configuration\LoggerSection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

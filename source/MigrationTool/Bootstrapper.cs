@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.Composition.Hosting;
 using System.Windows;
 using Microsoft.Practices.Prism.MefExtensions;
+using MigrationTool.Infrastructure;
 using MigrationTool.Modules.Editor;
 using MigrationTool.Modules.Import;
 using MigrationTool.Modules.Projects;
@@ -26,6 +27,7 @@ namespace MigrationTool
         {
             base.ConfigureAggregateCatalog();
 
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(CallbackLogger).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(EditorModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ImportModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ProjectsModule).Assembly));

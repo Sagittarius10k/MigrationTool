@@ -4,6 +4,11 @@ namespace MigrationTool.Infrastructure.Configuration
 {
     public class LoggerSection : ConfigurationSection
     {
-        // System.Configuration.ConfigurationProperty
+        [ConfigurationProperty("file")]
+        public FileElement FileElement
+        {
+            get { return (FileElement) this["file"]; }
+            set { this["file"] = value; }
+        }
     }
 }

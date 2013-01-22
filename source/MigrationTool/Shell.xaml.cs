@@ -1,28 +1,19 @@
-﻿using System.ComponentModel.Composition;
-using System.Configuration;
-using System.Diagnostics;
+﻿using System;
+using System.ComponentModel.Composition;
 using System.IO;
 using Microsoft.Practices.Prism.Logging;
 using MigrationTool.Infrastructure;
+using MigrationTool.Infrastructure.Configuration;
 
 namespace MigrationTool
 {
     /// <summary>
-    /// Interaction logic for Shell.xaml
+    ///     Interaction logic for Shell.xaml
     /// </summary>
-    public partial class Shell : IPartImportsSatisfiedNotification, ILoggerFacade
+    public partial class Shell : IPartImportsSatisfiedNotification
     {
-        [Import(AllowRecomposition = false)]
-        private CallbackLogger _logger; 
-
-        private string LogFilename
-        {
-            get 
-            {
-                var loggingSection = (SingleTagSectionHandler)ConfigurationManager.GetSection("LoggerSection");
-                return string.Empty;
-            }
-        }
+        [Import] private CallbackLogger _logger;
+        [Import] private ConfigurationManager _configuration;
 
         public Shell()
         {
@@ -37,9 +28,11 @@ namespace MigrationTool
 
         public void Log(string message, Category category, Priority priority)
         {
-            using (var file = new FileStream(LogFilename, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read))
+            using (var file = new FileStream(_configuration.LogFileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.Read))
             {
-                
+                var bytes = new byte[message.Length*sizeof (char)];
+                Buffer.BlockCopy(message.ToCharArray(), 0, bytes, 0, bytes.Length);
+                file.Write(bytes, 0, bytes.Length);
             }
         }
     }

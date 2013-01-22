@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using Microsoft.Practices.Prism.Logging;
 
 namespace MigrationTool.Infrastructure
@@ -7,6 +8,7 @@ namespace MigrationTool.Infrastructure
     /// <summary>
     /// A logger that holds on to log entries until a callback delegate is set, then plays back log entries and sends new log entries.
     /// </summary>
+    [Export]
     public class CallbackLogger : ILoggerFacade
     {
         private readonly Queue<Tuple<string, Category, Priority>> _savedLogs =
