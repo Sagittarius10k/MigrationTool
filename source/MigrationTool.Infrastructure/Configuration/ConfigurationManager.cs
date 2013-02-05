@@ -28,18 +28,18 @@ namespace MigrationTool.Infrastructure.Configuration
             {
                 loggerSection = new LoggerSection();
                 _configuration.Sections.Add(LoggerSection, loggerSection);
+
+                loggerSection.FileElement.Name = loggerSection.FileElement.Name;
             }
             if (projectsSection == null)
             {
                 projectsSection = new ProjectsSection();
                 _configuration.Sections.Add(ProjectsSection, projectsSection);
+
+                projectsSection.DefaultFolder.Path = projectsSection.DefaultFolder.Path;
             }
 
-            loggerSection.FileElement.Name = loggerSection.FileElement.Name;
-            projectsSection.DefaultFolderElement.Path = projectsSection.DefaultFolderElement.Path;
-
             _configuration.Save(ConfigurationSaveMode.Modified);
-            //System.Configuration.ConfigurationManager.RefreshSection(LoggerSection);
         }
 
         public String LogFileName

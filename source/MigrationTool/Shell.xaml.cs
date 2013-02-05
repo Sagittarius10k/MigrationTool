@@ -8,7 +8,7 @@ using MigrationTool.Infrastructure.Configuration;
 namespace MigrationTool
 {
     /// <summary>
-    ///     Interaction logic for Shell.xaml
+    /// Interaction logic for Shell.xaml
     /// </summary>
     public partial class Shell : IPartImportsSatisfiedNotification
     {

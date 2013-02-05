@@ -45,12 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behaviors\AutoPopulateExportedViewsBehavior.cs" />
+    <Compile Include="Behaviors\IViewRegionRegistration.cs" />
+    <Compile Include="Behaviors\ViewExportAttribute.cs" />
     <Compile Include="CallbackLogger.cs" />
     <Compile Include="Configuration\ConfigurationManager.cs" />
     <Compile Include="Configuration\DefaultFolderElement.cs" />
     <Compile Include="Configuration\FileElement.cs" />
     <Compile Include="Configuration\LoggerSection.cs" />
     <Compile Include="Configuration\ProjectElement.cs" />
+    <Compile Include="Configuration\ProjectElementCollection.cs" />
     <Compile Include="Configuration\ProjectsSection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
