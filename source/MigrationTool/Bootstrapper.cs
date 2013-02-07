@@ -2,6 +2,7 @@
 using System.Windows;
 using Microsoft.Practices.Prism.MefExtensions;
 using MigrationTool.Infrastructure;
+using MigrationTool.Infrastructure.Behaviors;
 using MigrationTool.Modules.Editor;
 using MigrationTool.Modules.Import;
 using MigrationTool.Modules.Projects;
@@ -31,6 +32,14 @@ namespace MigrationTool
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(EditorModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ImportModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ProjectsModule).Assembly));
+        }
+
+        protected override Microsoft.Practices.Prism.Regions.IRegionBehaviorFactory ConfigureDefaultRegionBehaviors()
+        {
+            var factory = base.ConfigureDefaultRegionBehaviors();
+            factory.AddIfMissing("AutoPopulateExportedViewsBehavior", typeof(AutoPopulateExportedViewsBehavior));
+            
+            return factory;
         }
     }
 }

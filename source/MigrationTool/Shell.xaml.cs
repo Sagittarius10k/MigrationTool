@@ -14,10 +14,19 @@ namespace MigrationTool
     {
         [Import] private CallbackLogger _logger;
         [Import] private ConfigurationManager _configuration;
-
+        
         public Shell()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Sets the ViewModel
+        /// </summary>
+        [Import]
+        private ShellViewModel ViewModel
+        {
+            set { DataContext = value; }
         }
 
         public void OnImportsSatisfied()
