@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Composition;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using Microsoft.Practices.Prism.Logging;
 using MigrationTool.Infrastructure;
@@ -12,9 +13,15 @@ namespace MigrationTool
     /// </summary>
     public partial class Shell : IPartImportsSatisfiedNotification
     {
+        [SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Justification = "MEF injected values")]
         [Import] private CallbackLogger _logger;
-        [Import] private ConfigurationManager _configuration;
-        
+
+#pragma warning disable 0649
+        [Import]
+        //[SuppressMessage("Microsoft.Performance", "CA1823")]
+        private ConfigurationManager _configuration;
+#pragma warning restore 0649
+
         public Shell()
         {
             InitializeComponent();

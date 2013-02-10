@@ -2,16 +2,17 @@
         xmlns:prism="http://www.codeplex.com/prism"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Migration Tool" Height="350" Width="525">
+        Title="Migration Tool" Height="600" Width="800">
     <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="200" MaxWidth="200" MinWidth="200" ></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <ItemsControl Grid.Row="0" Grid.Column="0" Name="MainRegion" prism:RegionManager.RegionName="MainRegion"/>
+        <ItemsControl Grid.Row="0" Grid.Column="0"  Grid.RowSpan="2" Name="ProjectsRegion" prism:RegionManager.RegionName="ProjectsRegion"/>
+        <ItemsControl Grid.Row="1" Grid.Column="1"  Name="MainRegion" prism:RegionManager.RegionName="MainRegion"/>
     </Grid>
 </Window>

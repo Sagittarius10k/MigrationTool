@@ -9,7 +9,7 @@ using MigrationTool.Modules.Projects;
 
 namespace MigrationTool
 {
-    class Bootstrapper : MefBootstrapper
+    class MigrationToolBootstrapper : MefBootstrapper
     {
         protected override DependencyObject CreateShell()
         {
@@ -28,6 +28,7 @@ namespace MigrationTool
         {
             base.ConfigureAggregateCatalog();
 
+            AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ShellViewModel).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(CallbackLogger).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(EditorModule).Assembly));
             AggregateCatalog.Catalogs.Add(new AssemblyCatalog(typeof(ImportModule).Assembly));
@@ -38,7 +39,7 @@ namespace MigrationTool
         {
             var factory = base.ConfigureDefaultRegionBehaviors();
             factory.AddIfMissing("AutoPopulateExportedViewsBehavior", typeof(AutoPopulateExportedViewsBehavior));
-            
+
             return factory;
         }
     }
