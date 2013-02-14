@@ -55,6 +55,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProjectManager.cs" />
     <Compile Include="ProjectsList\ProjectsListView.xaml.cs">
       <DependentUpon>ProjectsListView.xaml</DependentUpon>
     </Compile>

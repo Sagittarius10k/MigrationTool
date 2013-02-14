@@ -4,9 +4,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="200" >
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="90,99,0,0" VerticalAlignment="Top" Width="75"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
 
+        <ListBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5,5,5,5"></ListBox>
+        <Button Name="AddButton" Grid.Column="0" Grid.Row="0" Content="Add"/>
+        <Button Name="RemoveButton" Grid.Column="1" Grid.Row="0" Content="Remove"/>
+        <Button Name="Collapse" Grid.Column="1" Grid.Row="2" Content="Collapse"/>
     </Grid>
 </UserControl>

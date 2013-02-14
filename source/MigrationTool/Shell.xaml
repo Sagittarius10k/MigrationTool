@@ -13,7 +13,7 @@
             <RowDefinition Height="30"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <ItemsControl Grid.Row="0" Grid.Column="0"  Grid.RowSpan="2" Name="ProjectsRegion" prism:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ProjectsRegion}"/>
+        <ItemsControl Grid.Row="0" Grid.Column="0"  Grid.RowSpan="2" Name="ProjectsRegion" prism:RegionManager.RegionName="{x:Static infrastructure:RegionNames.ProjectsRegion}" Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}"/>
         <ItemsControl Grid.Row="1" Grid.Column="1"  Name="MainRegion" prism:RegionManager.RegionName="{x:Static infrastructure:RegionNames.MainRegion}"/>
     </Grid>
 </Window>
