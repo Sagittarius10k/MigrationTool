@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Configuration;
+using System.Linq;
+using MigrationTool.Infrastructure.BusinessObjects;
 
 namespace MigrationTool.Infrastructure.Configuration
 {
@@ -45,6 +48,24 @@ namespace MigrationTool.Infrastructure.Configuration
         public String LogFileName
         {
             get { return ((LoggerSection) _configuration.Sections[LoggerSection]).FileElement.Name; }
+        }
+
+        public IEnumerable<Project> GetProject()
+        {
+            var projects = new List<Project>();
+            var projectsSection = _configuration.Sections[ProjectsSection] as ProjectsSection;
+
+            if (projectsSection == null)
+                return projects;
+
+            projects.AddRange(from ProjectElement projectElement in projectsSection.Projects
+                              select new Project
+                                  {
+                                      Name = projectElement.Name,
+                                      Compressed = projectElement.Compressed,
+                                      StorageUrl = projectElement.StorageUrl
+                                  });
+            return projects;
         }
     }
 }

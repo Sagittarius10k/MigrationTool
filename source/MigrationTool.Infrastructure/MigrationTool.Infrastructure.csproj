@@ -48,6 +48,7 @@
     <Compile Include="Behaviors\AutoPopulateExportedViewsBehavior.cs" />
     <Compile Include="Behaviors\IViewRegionRegistration.cs" />
     <Compile Include="Behaviors\ViewExportAttribute.cs" />
+    <Compile Include="BusinessObjects\Project.cs" />
     <Compile Include="CallbackLogger.cs" />
     <Compile Include="Configuration\ConfigurationManager.cs" />
     <Compile Include="Configuration\DefaultFolderElement.cs" />
